@@ -16,9 +16,9 @@ POSTGRES_PORT = '5432'
 POSTGRES_DB = 'airflow'
 
 # BigQuery settings
-PROJECT_ID = 'pacific-ethos-433305-u0'  # Replace with your project ID
-DATASET_ID = 'The_Weather_Data'  # Dataset name (not full ID)
-TABLE_ID = 'The_Weather_Table'  # Table name (not full ID)
+PROJECT_ID = 'pacific-ethos-433305-u0'  
+DATASET_ID = 'The_Weather_Data'  
+TABLE_ID = 'The_Weather_Table'  
 
 def call_api(api_key, end_date):
     hook = IngestionApiHook(http_conn_id='ingestion_api', method='GET')
@@ -56,7 +56,7 @@ def upload_to_bigquery(df):
     table_id = f'{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}'
     
     # Create BigQuery hook to use connection google_cloud_default
-    hook = BigQueryHook(gcp_conn_id='google_cloud_default', use_legacy_sql=False)
+    hook = BigQueryHook(gcp_conn_id='google_cloud_defaulttt', use_legacy_sql=False)
     client = hook.get_client()  # Get BigQuery client
 
     # Upload DataFrame to BigQuery
