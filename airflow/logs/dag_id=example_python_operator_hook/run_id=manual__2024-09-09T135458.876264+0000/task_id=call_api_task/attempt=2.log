@@ -1,0 +1,62 @@
+[2024-09-09T13:58:01.356+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-09T13:58:01.369+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:58.876264+00:00 [queued]>
+[2024-09-09T13:58:01.375+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:58.876264+00:00 [queued]>
+[2024-09-09T13:58:01.375+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 4
+[2024-09-09T13:58:01.384+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): call_api_task> on 2024-09-09 13:54:58.876264+00:00
+[2024-09-09T13:58:01.390+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator_hook', 'call_api_task', 'manual__2024-09-09T13:54:58.876264+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/example_python_operator_hook.py', '--cfg-path', '/tmp/tmpsqepnopd']
+[2024-09-09T13:58:01.392+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask call_api_task
+[2024-09-09T13:58:01.393+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=696) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-09T13:58:01.393+0000] {standard_task_runner.py:63} INFO - Started process 698 to run task
+[2024-09-09T13:58:01.421+0000] {task_command.py:426} INFO - Running <TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:58.876264+00:00 [running]> on host d3466d5464ee
+[2024-09-09T13:58:01.481+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator_hook' AIRFLOW_CTX_TASK_ID='call_api_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T13:54:58.876264+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T13:54:58.876264+00:00'
+[2024-09-09T13:58:01.481+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-09T13:58:01.593+0000] {base.py:84} INFO - Using connection ID 'ingestion_api' for task execution.
+[2024-09-09T13:58:01.774+0000] {http.py:199} ERROR - HTTP error: Bad Request
+[2024-09-09T13:58:01.775+0000] {http.py:200} ERROR - {"error":"Start Date, and End Date must be supplied. Expected: YYYY-MM-DD:HH or YYYY-MM-DD."}
+
+[2024-09-09T13:58:01.775+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-09T13:58:01.782+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 197, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherbit.io/v2.0/history/daily?lat=59.334591&lon=18.0686&key=***&start_date=2024-09-08%25end_date=2024-09-09
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 10, in call_api
+    response = hook.run(endpoint=f'/v2.0/history/daily?lat=59.334591&lon=18.0686&key={api_key}&start_date=2024-09-08%end_date=2024-09-09')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/plugins/hooks/ingestion_api_hook.py", line 18, in run
+    response = super().run(
+               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 187, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 238, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 201, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 400:Bad Request
+[2024-09-09T13:58:01.790+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=example_python_operator_hook, task_id=call_api_task, run_id=manual__2024-09-09T13:54:58.876264+00:00, execution_date=20240909T135458, start_date=20240909T135801, end_date=20240909T135801
+[2024-09-09T13:58:01.798+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 18 for task call_api_task (400:Bad Request; 698)
+[2024-09-09T13:58:01.847+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-09T13:58:01.858+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T13:58:01.860+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

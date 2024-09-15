@@ -1,0 +1,141 @@
+[2024-09-03T07:15:43.264+0000] {processor.py:186} INFO - Started process (PID=8232) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:15:43.264+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:15:43.265+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:15:43.265+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:15:43.286+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:15:43.281+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 49, in <module>
+    'start_date': days_ago(1),
+                  ^^^^^^^^
+NameError: name 'days_ago' is not defined
+[2024-09-03T07:15:43.289+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:15:43.304+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.044 seconds
+[2024-09-03T07:16:13.601+0000] {processor.py:186} INFO - Started process (PID=8296) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:13.602+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:16:13.603+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:16:13.603+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:13.616+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:16:13.611+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 49, in <module>
+    'start_date': days_ago(1),
+                  ^^^^^^^^
+NameError: name 'days_ago' is not defined
+[2024-09-03T07:16:13.618+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:13.630+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.033 seconds
+[2024-09-03T07:16:43.806+0000] {processor.py:186} INFO - Started process (PID=8360) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:43.807+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:16:43.808+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:16:43.808+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:43.820+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:16:43.816+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 49, in <module>
+    'start_date': days_ago(1),
+                  ^^^^^^^^
+NameError: name 'days_ago' is not defined
+[2024-09-03T07:16:43.823+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:16:43.836+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.035 seconds
+[2024-09-03T07:17:13.976+0000] {processor.py:186} INFO - Started process (PID=8424) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:13.977+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:17:13.978+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:13.977+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:13.990+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:13.986+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 49, in <module>
+    'start_date': days_ago(1),
+                  ^^^^^^^^
+NameError: name 'days_ago' is not defined
+[2024-09-03T07:17:13.993+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:14.006+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.034 seconds
+[2024-09-03T07:17:44.293+0000] {processor.py:186} INFO - Started process (PID=8494) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:44.293+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:17:44.294+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:44.294+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:44.306+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:44.302+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 49, in <module>
+    'start_date': days_ago(1),
+                  ^^^^^^^^
+NameError: name 'days_ago' is not defined
+[2024-09-03T07:17:44.309+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:44.321+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.033 seconds
+[2024-09-03T07:17:51.380+0000] {processor.py:186} INFO - Started process (PID=8495) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:51.381+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:17:51.382+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:51.381+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:51.402+0000] {processor.py:925} INFO - DAG(s) 'weather_data_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:17:51.473+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:51.473+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:17:51.488+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:17:51.488+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_data_dag to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-03T07:17:51.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.129 seconds
+[2024-09-03T07:18:02.495+0000] {processor.py:186} INFO - Started process (PID=8528) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:02.496+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:18:02.497+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:02.496+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:02.516+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:02.590+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:02.590+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:18:02.606+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:02.606+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:18:02.623+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.132 seconds
+[2024-09-03T07:18:33.050+0000] {processor.py:186} INFO - Started process (PID=8596) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:33.050+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:18:33.051+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:33.051+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:33.064+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:33.078+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:33.078+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:18:33.095+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:33.095+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:18:33.109+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.063 seconds
+[2024-09-03T07:18:36.165+0000] {processor.py:186} INFO - Started process (PID=8597) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:36.165+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:18:36.166+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:36.166+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:36.185+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:18:36.199+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:36.199+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:18:36.217+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:18:36.217+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:18:36.232+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.072 seconds
+[2024-09-03T07:19:06.376+0000] {processor.py:186} INFO - Started process (PID=8661) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:06.377+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:19:06.378+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:06.377+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:06.391+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:06.405+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:06.404+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:19:06.423+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:06.423+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:19:06.435+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.063 seconds
+[2024-09-03T07:19:36.733+0000] {processor.py:186} INFO - Started process (PID=8725) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:36.733+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:19:36.734+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:36.734+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:36.747+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:19:36.761+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:36.761+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:19:36.779+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:19:36.778+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:19:36.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.064 seconds
+[2024-09-03T07:20:07.718+0000] {processor.py:186} INFO - Started process (PID=8789) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:07.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:20:07.719+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:20:07.719+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:07.731+0000] {processor.py:925} INFO - DAG(s) 'weather_dag' retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:07.744+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:20:07.744+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-03T07:20:07.763+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:20:07.763+0000] {dag.py:4138} INFO - Setting next_dagrun for weather_dag to 2024-09-03 00:00:00+00:00, run_after=2024-09-04 00:00:00+00:00
+[2024-09-03T07:20:07.776+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.062 seconds
+[2024-09-03T07:20:30.060+0000] {processor.py:186} INFO - Started process (PID=8825) to work on /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:30.061+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weatehr_dag.py for tasks to queue
+[2024-09-03T07:20:30.062+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:20:30.062+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:30.079+0000] {logging_mixin.py:190} INFO - [2024-09-03T07:20:30.076+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/weatehr_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/weatehr_dag.py", line 68, in <module>
+    dag = DAG(
+          ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 648, in __init__
+    raise ValueError("DAG is missing the start_date parameter")
+ValueError: DAG is missing the start_date parameter
+[2024-09-03T07:20:30.080+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weatehr_dag.py
+[2024-09-03T07:20:30.094+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weatehr_dag.py took 0.038 seconds

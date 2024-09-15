@@ -1,0 +1,60 @@
+[2024-09-12T22:43:16.364+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-12T22:43:16.375+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T22:40:12.733619+00:00 [queued]>
+[2024-09-12T22:43:16.381+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T22:40:12.733619+00:00 [queued]>
+[2024-09-12T22:43:16.382+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-09-12T22:43:16.391+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): call_api_task> on 2024-09-12 22:40:12.733619+00:00
+[2024-09-12T22:43:16.398+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-12T22:43:16.399+0000] {standard_task_runner.py:63} INFO - Started process 2426 to run task
+[2024-09-12T22:43:16.398+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator_hook', 'call_api_task', 'manual__2024-09-12T22:40:12.733619+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/example_python_operator_hook.py', '--cfg-path', '/tmp/tmp2uruc2s_']
+[2024-09-12T22:43:16.399+0000] {standard_task_runner.py:91} INFO - Job 114: Subtask call_api_task
+[2024-09-12T22:43:16.429+0000] {task_command.py:426} INFO - Running <TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T22:40:12.733619+00:00 [running]> on host 1ab47b72986b
+[2024-09-12T22:43:16.488+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator_hook' AIRFLOW_CTX_TASK_ID='call_api_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-12T22:40:12.733619+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-12T22:40:12.733619+00:00'
+[2024-09-12T22:43:16.489+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-12T22:43:16.504+0000] {base.py:84} INFO - Using connection ID 'ingestion_api' for task execution.
+[2024-09-12T22:43:16.686+0000] {logging_mixin.py:188} INFO - DataFrame saved to PostgreSQL successfully.
+[2024-09-12T22:43:16.691+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-09-12T22:43:16.694+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2024-09-12T22:43:16.739+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/google/cloud/bigquery/_pandas_helpers.py:537 UserWarning: Pyarrow could not determine the type of columns: snow_depth.
+[2024-09-12T22:43:16.750+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-12T22:43:16.751+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 43, in call_api
+    upload_to_bigquery(df)
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 58, in upload_to_bigquery
+    job = client.load_table_from_dataframe(df, table_id, job_config=job_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 2824, in load_table_from_dataframe
+    return self.load_table_from_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 2560, in load_table_from_file
+    destination = _table_arg_to_table_ref(destination, default_project=self.project)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/bigquery/table.py", line 3157, in _table_arg_to_table_ref
+    value = TableReference.from_string(value, default_project=default_project)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/bigquery/table.py", line 267, in from_string
+    ) = _helpers._parse_3_part_id(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/bigquery/_helpers.py", line 886, in _parse_3_part_id
+    raise ValueError(
+ValueError: table_id must be a fully-qualified ID in standard SQL format, e.g., "project.dataset.table_id", got pacific-ethos-433305-u0.pacific-ethos-433305-u0.The_Weather_Data.pacific-ethos-433305-u0.The_Weather_Data.The_Weather_Table
+[2024-09-12T22:43:16.760+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=example_python_operator_hook, task_id=call_api_task, run_id=manual__2024-09-12T22:40:12.733619+00:00, execution_date=20240912T224012, start_date=20240912T224316, end_date=20240912T224316
+[2024-09-12T22:43:16.769+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 114 for task call_api_task (table_id must be a fully-qualified ID in standard SQL format, e.g., "project.dataset.table_id", got pacific-ethos-433305-u0.pacific-ethos-433305-u0.The_Weather_Data.pacific-ethos-433305-u0.The_Weather_Data.The_Weather_Table; 2426)
+[2024-09-12T22:43:16.813+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-12T22:43:16.823+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-12T22:43:16.825+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+[2024-09-09T13:54:21.176+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-09T13:54:21.189+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:20.498775+00:00 [queued]>
+[2024-09-09T13:54:21.195+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:20.498775+00:00 [queued]>
+[2024-09-09T13:54:21.195+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-09-09T13:54:21.205+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): call_api_task> on 2024-09-09 13:54:20.498775+00:00
+[2024-09-09T13:54:21.210+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator_hook', 'call_api_task', 'manual__2024-09-09T13:54:20.498775+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/example_python_operator_hook.py', '--cfg-path', '/tmp/tmpwanc9nct']
+[2024-09-09T13:54:21.212+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask call_api_task
+[2024-09-09T13:54:21.213+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=588) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-09T13:54:21.213+0000] {standard_task_runner.py:63} INFO - Started process 590 to run task
+[2024-09-09T13:54:21.242+0000] {task_command.py:426} INFO - Running <TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T13:54:20.498775+00:00 [running]> on host d3466d5464ee
+[2024-09-09T13:54:21.302+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator_hook' AIRFLOW_CTX_TASK_ID='call_api_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T13:54:20.498775+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T13:54:20.498775+00:00'
+[2024-09-09T13:54:21.303+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-09T13:54:21.412+0000] {base.py:84} INFO - Using connection ID 'ingestion_api' for task execution.
+[2024-09-09T13:54:21.587+0000] {logging_mixin.py:188} INFO - Response Type: <class 'dict'>
+[2024-09-09T13:54:21.587+0000] {logging_mixin.py:188} INFO - Response Content: {'count': 1, 'data': [{'app_temp': 21.6, 'aqi': 63, 'city_name': 'Stockholm', 'clouds': 89, 'country_code': 'SE', 'datetime': '2024-09-09:13', 'dewpt': 10.8, 'dhi': 92, 'dni': 769, 'elev_angle': 29.83, 'ghi': 469, 'gust': None, 'h_angle': 45, 'lat': 59.3346, 'lon': 18.0686, 'ob_time': '2024-09-09 13:24', 'pod': 'd', 'precip': 0, 'pres': 1002.7, 'rh': 49, 'slp': 1004, 'snow': 0, 'solar_rad': 216.5, 'sources': ['ESSB', 'radar', 'satellite'], 'state_code': '26', 'station': 'ESSB', 'sunrise': '04:05', 'sunset': '17:25', 'temp': 22, 'timezone': 'Europe/Stockholm', 'ts': 1725888266, 'uv': 1, 'vis': 16, 'weather': {'code': 803, 'icon': 'c03d', 'description': 'Broken clouds'}, 'wind_cdir': 'SE', 'wind_cdir_full': 'southeast', 'wind_dir': 130, 'wind_spd': 7.7}]}
+[2024-09-09T13:54:21.594+0000] {logging_mixin.py:188} INFO - CSV file saved successfully.
+[2024-09-09T13:54:21.594+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-09T13:54:21.594+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-09T13:54:21.601+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=example_python_operator_hook, task_id=call_api_task, run_id=manual__2024-09-09T13:54:20.498775+00:00, execution_date=20240909T135420, start_date=20240909T135421, end_date=20240909T135421
+[2024-09-09T13:54:21.627+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-09T13:54:21.639+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T13:54:21.641+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
