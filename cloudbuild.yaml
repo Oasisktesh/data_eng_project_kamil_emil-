@@ -1,3 +1,6 @@
+options:
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
@@ -15,7 +18,7 @@ steps:
            '--platform', 'managed',
            '--region', 'us-central1',
            '--allow-unauthenticated',
-           '--port', '8081']  # Ensure this matches the port exposed in the Dockerfile
+           '--port', '8081']
 
 images:
   - 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID'
