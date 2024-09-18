@@ -22,7 +22,7 @@ TABLE_ID = 'The_Weather_Table'
 
 def call_api(api_key, end_date):
     hook = IngestionApiHook(http_conn_id='ingestion_api', method='GET')
-    response = hook.run(endpoint=f'/v2.0/history/daily?lat=59.33&lon=18.07&key={api_key}&start_date=2024-02-09&end_date={end_date}')
+    response = hook.run(endpoint=f'/v2.0/history/daily?lat=59.33&lon=18.07&key={api_key}&start_date=2024-01-09&end_date={end_date}')
 
     if isinstance(response, dict) and 'data' in response:
         data = response['data']
@@ -31,10 +31,10 @@ def call_api(api_key, end_date):
         df = pd.json_normalize(data)
 
         # Clean the DataFrame
-        df = df[['clouds', 'max_temp_ts', 'max_wind_spd', 'min_temp', 'revision_status', 'snow', 'solar_rad', 'temp', 'wind_gust_spd', 'wind_spd']]
+        df = df[['clouds', 'max_temp_ts', 'max_wind_spd', 'min_temp', 'revision_status', 'snow', 'solar_rad', 'temp', 'wind_gust_spd', 'wind_spd','datetime']]
 
         # Rename columns if needed (for example purposes, these match your desired format)
-        df.columns = ['clouds', 'max_temp_ts', 'max_wind_spd', 'min_temp', 'revision_status', 'snow', 'solar_rad', 'temp', 'wind_gust_spd', 'wind_spd']
+        df.columns = ['clouds', 'max_temp_ts', 'max_wind_spd', 'min_temp', 'revision_status', 'snow', 'solar_rad', 'temp', 'wind_gust_spd', 'wind_spd','datetime']
 
         # Create SQLAlchemy engine for PostgreSQL
         engine = create_engine(f'postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}')
