@@ -5738,3 +5738,17 @@
 [2024-09-19T11:10:49.633+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:10:49.633+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-09-19T11:10:49.649+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:10:49.648+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
 [2024-09-19T11:10:49.662+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.080 seconds
+[2024-09-19T11:11:19.713+0000] {processor.py:161} INFO - Started process (PID=960) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:19.713+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:11:19.715+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:19.714+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:19.743+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:19.757+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:19.757+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:11:19.773+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:19.773+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:11:19.786+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.080 seconds
+[2024-09-19T11:11:49.917+0000] {processor.py:161} INFO - Started process (PID=971) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:49.917+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:11:49.919+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:49.919+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:49.948+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:11:49.962+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:49.962+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:11:49.977+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:11:49.977+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:11:49.990+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.080 seconds
