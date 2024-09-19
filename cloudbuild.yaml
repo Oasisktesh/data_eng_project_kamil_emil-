@@ -5,12 +5,16 @@ steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID', '.']
-  
-  # Step 2: Push the Docker image to Google Container Registry
+
+  # Step 2: Run tests inside the Docker container
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['run', '--rm', 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID', 'pytest']
+
+  # Step 3: Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID']
-  
-  # Step 3: Deploy to Cloud Run
+
+  # Step 4: Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: ['run', 'deploy', 'fastapi-weather-app',
