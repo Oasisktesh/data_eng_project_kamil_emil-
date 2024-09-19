@@ -16,7 +16,7 @@ steps:
     args: ['run', 'deploy', 'fastapi-weather-app',
            '--image', 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID',
            '--platform', 'managed',
-           '--region', 'europe-north1-a	',
+           '--region', 'europe-north1-a',
            '--allow-unauthenticated',
            '--port', '8081']
 
