@@ -21,4 +21,4 @@ steps:
            '--port', '8081']
 
 images:
-  - 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID', this is my code right now
+  - 'gcr.io/$PROJECT_ID/fastapi-weather-app:$BUILD_ID'
