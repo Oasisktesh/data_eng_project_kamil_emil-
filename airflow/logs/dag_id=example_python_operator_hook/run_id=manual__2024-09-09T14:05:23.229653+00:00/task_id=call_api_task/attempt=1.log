@@ -1,0 +1,62 @@
+[2024-09-09T14:05:24.057+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-09T14:05:24.069+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T14:05:23.229653+00:00 [queued]>
+[2024-09-09T14:05:24.075+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T14:05:23.229653+00:00 [queued]>
+[2024-09-09T14:05:24.076+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-09-09T14:05:24.084+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): call_api_task> on 2024-09-09 14:05:23.229653+00:00
+[2024-09-09T14:05:24.090+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator_hook', 'call_api_task', 'manual__2024-09-09T14:05:23.229653+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/example_python_operator_hook.py', '--cfg-path', '/tmp/tmp4bhzbq3c']
+[2024-09-09T14:05:24.092+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask call_api_task
+[2024-09-09T14:05:24.092+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=894) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-09T14:05:24.093+0000] {standard_task_runner.py:63} INFO - Started process 896 to run task
+[2024-09-09T14:05:24.121+0000] {task_command.py:426} INFO - Running <TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-09T14:05:23.229653+00:00 [running]> on host d3466d5464ee
+[2024-09-09T14:05:24.183+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator_hook' AIRFLOW_CTX_TASK_ID='call_api_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T14:05:23.229653+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T14:05:23.229653+00:00'
+[2024-09-09T14:05:24.184+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-09T14:05:24.298+0000] {base.py:84} INFO - Using connection ID 'ingestion_api' for task execution.
+[2024-09-09T14:05:24.459+0000] {http.py:199} ERROR - HTTP error: Bad Request
+[2024-09-09T14:05:24.460+0000] {http.py:200} ERROR - {"error":"Invalid URI"}
+
+[2024-09-09T14:05:24.460+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-09T14:05:24.466+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 197, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherbit.io/https://api.weatherbit.io/v2.0/history/daily?lat=35.78&lon=78.64&start_date=2024-09-05&end_date=2024-09-06&key=***
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 20, in call_api_and_save_data
+    response = hook.run(endpoint=endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/plugins/hooks/ingestion_api_hook.py", line 18, in run
+    response = super().run(
+               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 187, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 238, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/http/hooks/http.py", line 201, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 400:Bad Request
+[2024-09-09T14:05:24.474+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=example_python_operator_hook, task_id=call_api_task, run_id=manual__2024-09-09T14:05:23.229653+00:00, execution_date=20240909T140523, start_date=20240909T140524, end_date=20240909T140524
+[2024-09-09T14:05:24.481+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 24 for task call_api_task (400:Bad Request; 896)
+[2024-09-09T14:05:24.506+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-09T14:05:24.517+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T14:05:24.519+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

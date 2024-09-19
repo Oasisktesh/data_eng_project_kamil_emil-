@@ -1,0 +1,62 @@
+[2024-09-12T20:25:09.095+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-12T20:25:09.106+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T20:22:06.762272+00:00 [queued]>
+[2024-09-12T20:25:09.112+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T20:22:06.762272+00:00 [queued]>
+[2024-09-12T20:25:09.112+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-09-12T20:25:09.123+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): call_api_task> on 2024-09-12 20:22:06.762272+00:00
+[2024-09-12T20:25:09.129+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator_hook', 'call_api_task', 'manual__2024-09-12T20:22:06.762272+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/example_python_operator_hook.py', '--cfg-path', '/tmp/tmpa95p_nso']
+[2024-09-12T20:25:09.131+0000] {standard_task_runner.py:91} INFO - Job 54: Subtask call_api_task
+[2024-09-12T20:25:09.132+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3243) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-12T20:25:09.132+0000] {standard_task_runner.py:63} INFO - Started process 3245 to run task
+[2024-09-12T20:25:09.161+0000] {task_command.py:426} INFO - Running <TaskInstance: example_python_operator_hook.call_api_task manual__2024-09-12T20:22:06.762272+00:00 [running]> on host 3bade3032056
+[2024-09-12T20:25:09.221+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_operator_hook' AIRFLOW_CTX_TASK_ID='call_api_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-12T20:22:06.762272+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-12T20:22:06.762272+00:00'
+[2024-09-12T20:25:09.221+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-12T20:25:09.237+0000] {base.py:84} INFO - Using connection ID 'ingestion_api' for task execution.
+[2024-09-12T20:25:09.459+0000] {logging_mixin.py:188} INFO - DataFrame saved to PostgreSQL successfully.
+[2024-09-12T20:25:09.462+0000] {_metadata.py:139} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: [Errno 111] Connection refused
+[2024-09-12T20:25:09.463+0000] {_metadata.py:139} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: [Errno 111] Connection refused
+[2024-09-12T20:25:09.464+0000] {_metadata.py:139} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: [Errno 111] Connection refused
+[2024-09-12T20:25:09.465+0000] {_default.py:338} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2024-09-12T20:25:09.465+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-12T20:25:09.466+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 40, in call_api
+    upload_to_gcs(df)
+  File "/opt/airflow/dags/example_python_operator_hook.py", line 46, in upload_to_gcs
+    client = storage.Client()
+             ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/client.py", line 226, in __init__
+    super(Client, self).__init__(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[2024-09-12T20:25:09.476+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=example_python_operator_hook, task_id=call_api_task, run_id=manual__2024-09-12T20:22:06.762272+00:00, execution_date=20240912T202206, start_date=20240912T202509, end_date=20240912T202509
+[2024-09-12T20:25:09.484+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 54 for task call_api_task (Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.; 3245)
+[2024-09-12T20:25:09.506+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-09-12T20:25:09.518+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-12T20:25:09.520+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
