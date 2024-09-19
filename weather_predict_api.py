@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd  # Ensure pandas is imported
 
 # Load the trained model
-with open('/app/random_forest_model_v1_5_1.pkl', 'rb') as f:
+with open('random_forest_model_v1_5_1.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Initialize the FastAPI app

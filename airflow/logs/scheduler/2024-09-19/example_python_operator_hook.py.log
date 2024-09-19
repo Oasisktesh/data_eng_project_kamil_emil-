@@ -6095,3 +6095,101 @@
 [2024-09-19T11:36:27.362+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:36:27.362+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-09-19T11:36:27.378+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:36:27.378+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
 [2024-09-19T11:36:27.391+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.081 seconds
+[2024-09-19T11:36:57.524+0000] {processor.py:161} INFO - Started process (PID=1521) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:36:57.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:36:57.526+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:36:57.526+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:36:57.556+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:36:57.571+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:36:57.570+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:36:57.587+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:36:57.587+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:36:57.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.083 seconds
+[2024-09-19T11:37:27.648+0000] {processor.py:161} INFO - Started process (PID=1533) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:27.648+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:37:27.649+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:27.649+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:27.682+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:27.696+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:27.696+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:37:27.713+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:27.712+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:37:27.727+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.086 seconds
+[2024-09-19T11:37:57.816+0000] {processor.py:161} INFO - Started process (PID=1544) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:57.817+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:37:57.818+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:57.818+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:57.849+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:37:57.863+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:57.863+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:37:57.879+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:37:57.879+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:37:57.892+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.082 seconds
+[2024-09-19T11:38:27.947+0000] {processor.py:161} INFO - Started process (PID=1555) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:27.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:38:27.949+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:27.949+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:27.982+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:27.999+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:27.998+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:38:28.017+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:28.017+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:38:28.032+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.091 seconds
+[2024-09-19T11:38:58.115+0000] {processor.py:161} INFO - Started process (PID=1566) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:58.115+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:38:58.117+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:58.117+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:58.148+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:38:58.164+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:58.164+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:38:58.180+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:38:58.180+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:38:58.194+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.086 seconds
+[2024-09-19T11:39:28.246+0000] {processor.py:161} INFO - Started process (PID=1577) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:28.247+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:39:28.248+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:28.248+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:28.279+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:28.293+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:28.293+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:39:28.309+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:28.309+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:39:28.325+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.085 seconds
+[2024-09-19T11:39:58.411+0000] {processor.py:161} INFO - Started process (PID=1588) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:58.412+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:39:58.413+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:58.413+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:58.444+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:39:58.458+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:58.458+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:39:58.475+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:39:58.475+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:39:58.488+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.083 seconds
+[2024-09-19T11:40:28.545+0000] {processor.py:161} INFO - Started process (PID=1599) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:28.546+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:40:28.547+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:28.547+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:28.577+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:28.591+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:28.591+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:40:28.607+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:28.607+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:40:28.620+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.082 seconds
+[2024-09-19T11:40:58.709+0000] {processor.py:161} INFO - Started process (PID=1610) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:58.710+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:40:58.712+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:58.711+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:58.743+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:40:58.758+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:58.758+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:40:58.774+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:40:58.774+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:40:58.787+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.084 seconds
+[2024-09-19T11:41:28.839+0000] {processor.py:161} INFO - Started process (PID=1621) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:28.839+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:41:28.841+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:28.840+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:28.871+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:28.886+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:28.886+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:41:28.902+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:28.902+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:41:28.917+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.085 seconds
+[2024-09-19T11:41:59.038+0000] {processor.py:161} INFO - Started process (PID=1632) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:59.038+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:41:59.040+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:59.040+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:59.066+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:41:59.080+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:59.080+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:41:59.095+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:41:59.095+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:41:59.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.077 seconds
+[2024-09-19T11:42:29.155+0000] {processor.py:161} INFO - Started process (PID=1643) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:29.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:42:29.157+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:29.157+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:29.187+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:29.202+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:29.202+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:42:29.218+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:29.217+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:42:29.231+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.083 seconds
+[2024-09-19T11:42:59.330+0000] {processor.py:161} INFO - Started process (PID=1654) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:59.330+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:42:59.332+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:59.332+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:59.361+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:42:59.375+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:59.375+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:42:59.391+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:42:59.391+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:42:59.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.080 seconds
+[2024-09-19T11:43:29.447+0000] {processor.py:161} INFO - Started process (PID=1665) to work on /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:43:29.447+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/example_python_operator_hook.py for tasks to queue
+[2024-09-19T11:43:29.449+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:43:29.448+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:43:29.481+0000] {processor.py:840} INFO - DAG(s) 'example_python_operator_hook' retrieved from /opt/airflow/dags/example_python_operator_hook.py
+[2024-09-19T11:43:29.496+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:43:29.496+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-19T11:43:29.513+0000] {logging_mixin.py:188} INFO - [2024-09-19T11:43:29.512+0000] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator_hook to 2024-09-19 00:00:00+00:00, run_after=2024-09-20 00:00:00+00:00
+[2024-09-19T11:43:29.525+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/example_python_operator_hook.py took 0.085 seconds
